@@ -3,7 +3,7 @@ from collections import Counter
 
 def words(string):
     if type(string) == str:
-        split_string = phrase.split()
+        split_string = string.split()
         word_occurence = dict(Counter(split_string))
         for key in word_occurence.keys():
             try:

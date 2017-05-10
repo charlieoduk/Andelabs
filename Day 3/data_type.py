@@ -1,13 +1,9 @@
 def data_type(something):
-    accepted_input = [str,None,bool,int,list]
-    valid = isinstance(accepted_input)
-    if something is valid:
+    if something is not None:
         is_type = type(something)
-        if is_type ==str:
+        if is_type == str:
             length = len(something)
             return length
-        elif is_type == None:
-            return 'no value'
         elif is_type == bool:
             return something
         elif is_type == int:
@@ -20,6 +16,6 @@ def data_type(something):
         elif is_type == list:
             if (len(something) < 3):
                 return None
-        return None
-    else:
-        raise ValueError
+            return something[2]
+        
+    return 'no value'

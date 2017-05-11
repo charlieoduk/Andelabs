@@ -1,13 +1,12 @@
 class BinarySearch(list):
 	"""docstring for BinarySearch"""
 	def __init__(self, a, b):
-		list.__init__()
+		super().__init__()
 		self.length = a
-		self.a = a
 		self.b = b
 
-		for x in range(self.length):
-			list.append(self.b)
+		for i in range(self.length):
+			list.append(self,self.b)
 			self.b += b
 
 
@@ -16,7 +15,7 @@ class BinarySearch(list):
 			midpoint = len(list)//2
 			count = 0
 			if list[midpoint] == num:
-				return {'count':0,'index':midpoint}
+				return {'count':count,'index':midpoint}
 			else:
 				if num < list[midpoint]:
 					count += 1
@@ -24,4 +23,4 @@ class BinarySearch(list):
 				else:
 					count += 1
 					return binary(list[midpoint+1:], num)
-		return {'count': counter, 'index': -1}
+		
